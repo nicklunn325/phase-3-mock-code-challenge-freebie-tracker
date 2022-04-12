@@ -4,6 +4,8 @@ class Freebie < ActiveRecord::Base
 
 
     def dev=(dev)
+        self.dev_id = dev.id
+        self.save
     end
 
     def print_details
