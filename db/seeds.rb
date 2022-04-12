@@ -17,5 +17,8 @@ puts "Creating freebies..."
 # * and a freebie belongs to a company.                         *
 # ***************************************************************
 # Create freebies Here
+25.times do
+    Freebie.create(item_name: Faker::Food.dish, value: rand(1..100), dev_id: Dev.all.sample.id, company_id: Company.all.sample.id)
+end
 
 puts "Seeding done!"
