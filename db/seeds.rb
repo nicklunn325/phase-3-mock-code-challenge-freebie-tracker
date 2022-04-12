@@ -18,4 +18,10 @@ puts "Creating freebies..."
 # ***************************************************************
 # Create freebies Here
 
+25.times do
+    Freebie.create(dev_id: Dev.all.sample.id, company_id: Company.all.sample.id, value: rand(1..100), item_name: Faker::Food.dish)
+    # Freebie.create(dev: Dev.all.sample, company: Company.all.sample, value: rand(1..100), item_name: Faker::Food.dish)
+end
+
 puts "Seeding done!"
+

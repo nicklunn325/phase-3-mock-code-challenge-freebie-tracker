@@ -169,3 +169,15 @@ companies for the first dev in the database based on your seed data; and
   - accepts a `Dev` instance and a `Freebie` instance, changes the freebie's dev
     to be the given dev; your code should only make the change if the freebie
     belongs to the dev who's giving it away
+
+### RECIPE FOR CC SUCCESS
+
+- STEP 0: Add faker gem to Gemfile
+- STEP 1: Read the Readme
+- STEP 2: Create necessary migrations: `rake db:create_migration NAME=create_freebies`
+- STEP 3: Run `rake db:migrate`
+- STEP 4: Establish relationships/associations with `has_many` `has_many through` & `belongs_to`
+- STEP 5: Update seeds file
+- STEP 6: Run `rake db:seed`
+- STEP 7: open `rake console` and test all relationships
+- STEP 8: define aggregate & associate methods ONE AT A TIME - TEST AS YOU GO
